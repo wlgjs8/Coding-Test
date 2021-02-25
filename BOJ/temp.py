@@ -1,16 +1,10 @@
 import sys
 
-def inp(): return int(sys.stdin.readline())
-def inpl(): return list(map(int, sys.stdin.readline().split()))
+N = sys.stdin.readline().strip()
 
-def a_sort(node):
-    return -node[1], node[0].lower()
-
-n = inp()
-a = []
-for _ in range(n):
-    na, sco = list(sys.stdin.readline().split())
-    a.append([na, int(sco)])
-
-a.sort(key=a_sort)
-print(a[0][0])
+num_result = [0,0,0,0,0,0,0,0,0,0]
+for i in range(1, int(N)+1):
+    str_i = str(i)
+    for tmp in str_i:
+        num_result[int(tmp)] += 1
+print(num_result)
