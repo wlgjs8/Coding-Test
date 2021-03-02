@@ -17,4 +17,4 @@ while start - end <= 0:
     min_front *= len(alba[start:mid])
     min_back *= len(alba[mid:end])
 
-    if min_front > min_back:
+    # if min_front > min_back:
